@@ -1,6 +1,7 @@
 package dados;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,7 +15,12 @@ public class Midiateca implements Iterador {
 		this.midia  = new ArrayList<>();
 	}
 
+	public int getContador() {
+		return contador;
+	}
+
 	public boolean cadastraMidia(Midia midia) {
+		contador++;
 		return this.midia.add(midia);
 	}
 
@@ -38,10 +44,25 @@ public class Midiateca implements Iterador {
 				.collect(Collectors.toCollection(ArrayList::new));
 	}
 
+	public Musica consultaPorMaiorDuracao() {
+		return midia.stream()
+				.filter(m -> m instanceof Musica)
+				.map(m -> (Musica) m)
+				.max(Comparator.comparingDouble(Musica::getDuracao))
+				.orElse(null);
+	}
+
+
 	public boolean removeMidia(int codigo) {
+		contador--;
 		return midia.removeIf(m -> m.getCodigo() == codigo);
 	}
 
+	public double somatorio(){
+		return midia.stream()
+				.mapToDouble(Midia::calculaLocacao)
+				.sum();
+	}
 
 	/**
 	 * @see dados.Iterador#reset()

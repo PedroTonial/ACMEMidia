@@ -6,18 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d41aa50f-700d-4df8-9a61-11216790b9f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrada.txt" beforeDir="false" afterPath="$PROJECT_DIR$/entrada.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ACMEMidia/app/ACMEMidia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ACMEMidia/app/ACMEMidia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Midia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Midia.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Midiateca.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Midiateca.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Musica$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Musica$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Musica.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Musica.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Video.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Video.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saida.txt" beforeDir="false" afterPath="$PROJECT_DIR$/saida.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/ACMEMidia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ACMEMidia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dados/Midia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dados/Midia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dados/Midiateca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dados/Midiateca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dados/Musica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dados/Musica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dados/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dados/Video.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +89,7 @@
       <workItem from="1717445891108" duration="916000" />
       <workItem from="1718043357335" duration="228000" />
       <workItem from="1718152292038" duration="6501000" />
-      <workItem from="1718159924678" duration="7997000" />
+      <workItem from="1718159924678" duration="11737000" />
     </task>
     <servers />
   </component>

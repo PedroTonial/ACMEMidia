@@ -55,7 +55,7 @@ public class Musica extends Midia {
 				+
 				"," + getCategoria().getNome()
 				+
-				"," + decimalFormat.format(duracao) + "," + getValorLocacao();
+				"," + decimalFormat.format(duracao) + "," + decimalFormat.format(getValorLocacao());
 	}
 
 }
