@@ -43,19 +43,20 @@ public class ACMEMidia {
 
 
     private void cadastraVideo() { //1
-        while (true) {
+        while (entrada.hasNextLine()) {
             int codigo = Integer.parseInt(entrada.nextLine());
             if (codigo == -1) {
-                break;
-            }
-            if (midiateca.consultaPorCodigo(codigo) != null) {
-                System.out.println("1:Erro-video com codigo repetido:" + codigo);
                 break;
             }
             String titulo = entrada.nextLine();
             int ano = Integer.parseInt(entrada.nextLine());
             Categoria categoria = Categoria.valueOf(entrada.nextLine().toUpperCase());
             int qualidade = Integer.parseInt(entrada.nextLine());
+
+            if (midiateca.consultaPorCodigo(codigo) != null) {
+                System.out.println("1:Erro-video com codigo repetido: " + codigo);
+                continue;
+            }
 
             Midia novaMidia = new Video(codigo, titulo, ano, categoria, qualidade);
             midiateca.cadastraMidia(novaMidia);
@@ -64,13 +65,9 @@ public class ACMEMidia {
     }
 
     private void cadastraMusica() { //2
-        while (true) {
-            int codigo = Integer.parseInt(entrada.nextLine());
+        while (entrada.hasNextLine()) {
+            int codigo = Integer.valueOf(entrada.nextLine());
             if (codigo == -1) {
-                break;
-            }
-            if (midiateca.consultaPorCodigo(codigo) != null) {
-                System.out.println("2:Erro-musica com codigo repetido:" + codigo);
                 break;
             }
             String titulo = entrada.nextLine();
@@ -78,6 +75,10 @@ public class ACMEMidia {
             Categoria categoria = Categoria.valueOf(entrada.nextLine().toUpperCase());
             double duracao = Double.parseDouble(entrada.nextLine());
 
+            if (midiateca.consultaPorCodigo(codigo) != null) {
+                System.out.println("2:Erro-musica com codigo repetido: " + codigo);
+                continue;
+            }
             Midia novaMidia = new Musica(codigo, titulo, ano, categoria, duracao);
             midiateca.cadastraMidia(novaMidia);
             System.out.println("2:" + novaMidia);
@@ -91,7 +92,7 @@ public class ACMEMidia {
             if (midiaConsultada instanceof Video) {
                 Video videoConsultado = (Video) midiaConsultada;
                 videoConsultado.calculaLocacao();
-                System.out.println("4:" + videoConsultado.toStringComLocacao());
+                System.out.println("3:" + videoConsultado.toStringComLocacao());
             } else if (midiaConsultada instanceof Musica) {
                 Musica musicaConsultada = (Musica) midiaConsultada;
                 musicaConsultada.calculaLocacao();
@@ -105,6 +106,13 @@ public class ACMEMidia {
     private void consultaMidiaPorCategoria() { //4
         entrada.nextLine();
         String categoriaConsultada = entrada.nextLine();
+        Categoria categoria;
+        try{
+            categoria = Categoria.valueOf(categoriaConsultada);
+        } catch (IllegalArgumentException e){
+            System.out.println("4:Nenhuma midia encontrada.");
+            return;
+        }
         ArrayList<Midia> midiasEncontradas = midiateca.consultaPorCategoria(Categoria.valueOf(categoriaConsultada));
         if (midiasEncontradas.isEmpty()) {
             System.out.println("4:Nenhuma midia encontrada.");

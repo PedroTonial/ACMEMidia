@@ -8,10 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entrada.txt" beforeDir="false" afterPath="$PROJECT_DIR$/entrada.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ACMEMidia/app/ACMEMidia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ACMEMidia/app/ACMEMidia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Midiateca.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ACMEMidia/dados/Midiateca.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saida.txt" beforeDir="false" afterPath="$PROJECT_DIR$/saida.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/ACMEMidia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ACMEMidia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dados/Midiateca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dados/Midiateca.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +87,7 @@
       <workItem from="1717445891108" duration="916000" />
       <workItem from="1718043357335" duration="228000" />
       <workItem from="1718152292038" duration="6501000" />
-      <workItem from="1718159924678" duration="11737000" />
+      <workItem from="1718159924678" duration="14254000" />
     </task>
     <servers />
   </component>
