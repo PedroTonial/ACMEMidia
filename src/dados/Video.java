@@ -1,8 +1,12 @@
 package dados;
 
+import java.text.DecimalFormat;
+
 public class Video extends Midia {
 
+	private double valorLocacao = 0;
 	private int qualidade;
+	private DecimalFormat decimalFormat = new DecimalFormat("#.00");
 
 	public Video(int codigo, String titulo, int ano, Categoria categoria, int qualidade) {
 		super(codigo, titulo, ano, categoria);
@@ -13,9 +17,12 @@ public class Video extends Midia {
 		return qualidade;
 	}
 
+	public double getValorLocacao() {
+		return valorLocacao;
+	}
+
 	@Override
 	public double calculaLocacao() {
-		int valorLocacao = 0;
 
 		if (getAno() == 2024) valorLocacao = 20;
 		if (getAno() >= 2000 && getAno() <= 2023 ) valorLocacao = 15;
@@ -35,5 +42,16 @@ public class Video extends Midia {
 				"," + getCategoria().getNome()
 				+
 				"," + qualidade;
+	}
+	public String toStringComLocacao() {
+		return  getCodigo()
+				+
+				"," + getTitulo()
+				+
+				"," + getAno()
+				+
+				"," + getCategoria().getNome()
+				+
+				"," + qualidade  + "," + decimalFormat.format(getValorLocacao());
 	}
 }

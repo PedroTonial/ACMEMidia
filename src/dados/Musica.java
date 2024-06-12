@@ -1,18 +1,23 @@
 package dados;
 
-public class Musica extends Midia {
+import java.text.DecimalFormat;
 
+public class Musica extends Midia {
+	private DecimalFormat decimalFormat = new DecimalFormat("#.00");
 	private double duracao;
+	private double valorLocacao;
 
 	public Musica(int codigo, String titulo, int ano, Categoria categoria, double duracao) {
 		super(codigo, titulo, ano,categoria);
 		this.duracao = duracao;
 	}
 
+	public double getValorLocacao() {
+		return this.valorLocacao;
+	}
 
 	@Override
 	public double calculaLocacao() {
-		double valorLocacao = 0;
 		switch (getCategoria()){
 			case ACA:  valorLocacao = getDuracao() * 0.90;
 			break;
@@ -30,4 +35,27 @@ public class Musica extends Midia {
 	public double getDuracao() {
 		return duracao;
 	}
+	public String toString() {
+		return  getCodigo()
+				+
+				"," + getTitulo()
+				+
+				"," + getAno()
+				+
+				"," + getCategoria().getNome()
+				+
+				"," + duracao;
+	}
+	public String toStringComLocacao() {
+		return  getCodigo()
+				+
+				"," + getTitulo()
+				+
+				"," + getAno()
+				+
+				"," + getCategoria().getNome()
+				+
+				"," + decimalFormat.format(duracao) + "," + getValorLocacao();
+	}
+
 }

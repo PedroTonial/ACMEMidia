@@ -31,6 +31,13 @@ public class Midiateca implements Iterador {
 				.collect(Collectors.toCollection(ArrayList::new));
 	}
 
+	public ArrayList<Video> consultaPorQualidade(int qualidade) {
+		return midia.stream()
+				.filter(m -> m instanceof Video && ((Video) m).getQualidade() == qualidade)
+				.map(m -> (Video) m)
+				.collect(Collectors.toCollection(ArrayList::new));
+	}
+
 	public boolean removeMidia(int codigo) {
 		return midia.removeIf(m -> m.getCodigo() == codigo);
 	}

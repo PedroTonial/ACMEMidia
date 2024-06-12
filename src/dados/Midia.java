@@ -35,4 +35,13 @@ public abstract class Midia {
 
 	public abstract double calculaLocacao();
 
+	public String toString() {
+		return  getCodigo()
+				+
+				"," + getTitulo()
+				+
+				"," + getAno()
+				+
+				"," + getCategoria().getNome();
+	}
 }
