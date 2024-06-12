@@ -24,4 +24,16 @@ public class Video extends Midia {
 		return valorLocacao;
 	}
 
+	@Override
+	public String toString() {
+		return  getCodigo()
+				+
+				"," + getTitulo()
+				+
+				"," + getAno()
+				+
+				"," + getCategoria().getNome()
+				+
+				"," + qualidade;
+	}
 }
