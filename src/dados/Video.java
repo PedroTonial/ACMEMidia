@@ -5,7 +5,7 @@ public class Video extends Midia {
 	private int qualidade;
 
 	public Video(int codigo, String titulo, int ano, Categoria categoria, int qualidade) {
-		super(codigo, titulo, ano);
+		super(codigo, titulo, ano, categoria);
 		this.qualidade = qualidade;
 	}
 
@@ -15,6 +15,12 @@ public class Video extends Midia {
 
 	@Override
 	public double calculaLocacao() {
-		return 0;
+		int valorLocacao = 0;
+
+		if (getAno() == 2024) valorLocacao = 20;
+		if (getAno() >= 2000 && getAno() <= 2023 ) valorLocacao = 15;
+		if (getAno() < 2000) valorLocacao = 10;
+
+		return valorLocacao;
 	}
 }
