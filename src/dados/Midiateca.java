@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class Midiateca implements Iterador {
 
-	private int contador;
+	private int contador = 0;
 
-	private Collection<Midia> midia;
+	private ArrayList<Midia> midia;
 
 	public Midiateca() {
 
@@ -34,7 +34,7 @@ public class Midiateca implements Iterador {
 	 * @see dados.Iterador#reset()
 	 */
 	public void reset() {
-
+		contador = 0;
 	}
 
 
@@ -42,7 +42,12 @@ public class Midiateca implements Iterador {
 	 * @see dados.Iterador#hasNext()
 	 */
 	public boolean hasNext() {
-		return false;
+		if(contador < midia.size()){
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 
@@ -50,7 +55,9 @@ public class Midiateca implements Iterador {
 	 * @see dados.Iterador#next()
 	 */
 	public Object next() {
-		return null;
+		Midia p = midia.get(contador);
+		contador++;
+		return p;
 	}
 
 }
