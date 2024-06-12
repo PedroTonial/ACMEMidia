@@ -1,13 +1,14 @@
 package dados;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Midiateca implements Iterador {
 
 	private int contador = 0;
 
-	private ArrayList<Midia> midia;
+	private List<Midia> midia;
 
 	public Midiateca() {
 		this.midia  = new ArrayList<>();
