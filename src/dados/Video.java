@@ -23,4 +23,5 @@ public class Video extends Midia {
 
 		return valorLocacao;
 	}
+
 }

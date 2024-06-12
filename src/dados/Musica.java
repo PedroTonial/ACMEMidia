@@ -21,6 +21,7 @@ public class Musica extends Midia {
 			case FIC: valorLocacao = getDuracao()* 0.50;
 			break;
 			case ROM: valorLocacao = getDuracao() * 0.30;
+			break;
 			default: valorLocacao = 0;
 		}
 		return valorLocacao;

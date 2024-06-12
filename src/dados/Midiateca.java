@@ -1,7 +1,7 @@
 package dados;
 
-import java.util.Collection;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Midiateca implements Iterador {
 
@@ -10,23 +10,28 @@ public class Midiateca implements Iterador {
 	private ArrayList<Midia> midia;
 
 	public Midiateca() {
-
+		this.midia  = new ArrayList<>();
 	}
 
-	public boolean cadastraMidia(Midia jogo) {
-		return false;
+	public boolean cadastraMidia(Midia midia) {
+		return this.midia.add(midia);
 	}
 
 	public Midia consultaPorCodigo(int codigo) {
-		return null;
+		return midia.stream()
+				.filter(m -> m.getCodigo() == codigo)
+				.findFirst()
+				.orElse(null);
 	}
 
 	public ArrayList<Midia> consultaPorCategoria(Categoria categoria) {
-		return null;
+		return midia.stream()
+				.filter(m -> m.getCategoria().equals(categoria))
+				.collect(Collectors.toCollection(ArrayList::new));
 	}
 
 	public boolean removeMidia(int codigo) {
-		return false;
+		return midia.removeIf(m -> m.getCodigo() == codigo);
 	}
 
 
